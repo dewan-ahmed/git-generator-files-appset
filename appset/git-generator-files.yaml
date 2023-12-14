@@ -20,4 +20,4 @@ spec:
         path: "overlays/{{cluster.name}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: "overlays/{{cluster.namespace}}"
+        namespace: "{{cluster.namespace}}"
