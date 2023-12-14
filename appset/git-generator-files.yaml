@@ -20,5 +20,4 @@ spec:
         path: "examples/git-generator-files-discovery/apps/guestbook"
       destination:
         server: https://kubernetes.default.svc
-        #server: '{{cluster.address}}'
-        namespace: guestbook
+        namespace: {{cluster.namespace}}
