@@ -5,6 +5,7 @@
   "cluster": {
     "owner": "cluster-admin@company.com",
     "name": "gitopscluster",
-    "address": "https://kubernetes.default.svc"
+    "address": "https://kubernetes.default.svc",
+    "namespace" : "prod"
   }
 }
