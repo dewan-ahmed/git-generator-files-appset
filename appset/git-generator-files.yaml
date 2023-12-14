@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
         revision: HEAD
         files:
-          - path: "appset"
+          - path: "overlays/**/config.json"
   template:
     metadata:
       name: '{{cluster.namespace}}-guestbook'
