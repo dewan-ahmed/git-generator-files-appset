@@ -1,7 +1,7 @@
 {
   "aws_account": "123456",
   "asset_id": "11223344",
-  "image": "dewandemo/guestbook-dev:0.1" 
+  "image": "dewandemo/guestbook-dev:0.1", 
   "cluster": {
     "owner": "cluster-admin@company.com",
     "name": "gitopscluster",
