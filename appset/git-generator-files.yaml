@@ -17,7 +17,7 @@ spec:
       source:
         repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
         targetRevision: HEAD
-        path: "overlays/{{cluster.name}}"
+        path: "base"
       destination:
         server: https://kubernetes.default.svc
         namespace: {{cluster.namespace}}
