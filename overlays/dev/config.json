@@ -4,7 +4,7 @@
   "image": "dewandemo/guestbook-dev:0.1", 
   "cluster": {
     "owner": "cluster-admin@company.com",
-    "name": "gitopscluster",
+    "name": "dev",
     "address": "https://kubernetes.default.svc",
     "namespace" : "dev"
   }
