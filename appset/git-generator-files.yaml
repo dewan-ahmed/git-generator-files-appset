@@ -15,9 +15,9 @@ spec:
     spec:
       project: 01fe3e37
       source:
-        repoURL: https://github.com/argoproj/applicationset.git
+        repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
         targetRevision: HEAD
-        path: "examples/git-generator-files-discovery/apps/guestbook"
+        path: "overlays/{{cluster.name}}"
       destination:
         server: https://kubernetes.default.svc
         namespace: {{cluster.namespace}}
