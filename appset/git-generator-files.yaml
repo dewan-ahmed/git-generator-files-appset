@@ -11,7 +11,7 @@ spec:
           - path: "appset"
   template:
     metadata:
-      name: '{{cluster.name}}-guestbook'
+      name: '{{cluster.namespace}}-guestbook'
     spec:
       project: 01fe3e37
       source:
@@ -20,4 +20,4 @@ spec:
         path: "overlays/{{cluster.name}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: guestbook
+        namespace: {{cluster.namespace}}
