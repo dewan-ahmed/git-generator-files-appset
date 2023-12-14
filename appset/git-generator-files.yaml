@@ -5,19 +5,20 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
+        repoURL: https://github.com/argoproj/applicationset.git
         revision: HEAD
         files:
-          - path: "overlays/**/config.json"
+        - path: "examples/git-generator-files-discovery/cluster-config/**/config.json"
   template:
     metadata:
-      name: '{{cluster.namespace}}-guestbook'
+      name: '{{cluster.name}}-guestbook'
     spec:
-      project: 01fe3e37
+      project: default
       source:
-        repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
+        repoURL: https://github.com/argoproj/applicationset.git
         targetRevision: HEAD
-        path: "base"
+        path: "examples/git-generator-files-discovery/apps/guestbook"
       destination:
         server: https://kubernetes.default.svc
-        namespace: {{cluster.namespace}}
+        #server: '{{cluster.address}}'
+        namespace: guestbook
