@@ -13,7 +13,7 @@ spec:
     metadata:
       name: '{{cluster.name}}-guestbook'
     spec:
-      project: default
+      project: 01fe3e37
       source:
         repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
         targetRevision: HEAD
