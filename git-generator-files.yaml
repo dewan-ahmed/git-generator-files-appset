@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
+        revision: HEAD
+        files:
+          - path: "overlays/**/config.json"
+  template:
+    metadata:
+      name: '{{cluster.name}}-guestbook'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/dewan-ahmed/git-generator-files-appset.git
+        targetRevision: HEAD
+        path: "overlays/{{cluster.name}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: guestbook
